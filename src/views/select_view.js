@@ -13,7 +13,7 @@ SelectView.prototype.bindEvents = function () {
 
   this.section.addEventListener('change', (event)=>{
     // console.log(event);
-    const selectedIndex = event.target.selectedIndex;
+    const selectedIndex = event.target.value;
     PubSub.publish('Select:country-selected', selectedIndex);
 
   })
