@@ -1,0 +1,54 @@
+/* Color Theme Swatches in Hex */
+.Aerial-view-of-the-ocean-wave.-1-hex { color: #023859; }
+.Aerial-view-of-the-ocean-wave.-2-hex { color: #03658C; }
+.Aerial-view-of-the-ocean-wave.-3-hex { color: #218DA6; }
+.Aerial-view-of-the-ocean-wave.-4-hex { color: #B4D2D9; }
+.Aerial-view-of-the-ocean-wave.-5-hex { color: #50B4BF; }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#country {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr 1.2fr 1fr;
+  grid-template-rows: 0.3fr 0.9fr 1.1fr;
+  grid-template-areas: "country_name country_name country_name country_name country_name" "info info flag flag flag" "info info flag flag flag";
+}
+
+.country_name {
+  grid-area: country_name;
+}
+
+.info {
+  grid-area: info;
+}
+
+.flag {
+  grid-area: flag;
+}
+
+h1 {
+  font-size: 3em;
+  color: #023859;
+}
+h2 {
+  font-size: 2.5em;
+  color: #023859;
+}
+h3 , label{
+  color: #023859;
+  font-size: 2em;
+}
+img {
+  max-width: 750px;
+  max-height: auto;
+}
+
+p, li {
+  color: #03658C;
+  font-size: 1.5em;
+}

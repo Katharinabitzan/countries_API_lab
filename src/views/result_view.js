@@ -15,34 +15,45 @@ ResultView.prototype.bindEvents = function () {
 ResultView.prototype.render = function (info) {
   this.field.innerHTML = '';
 
+const divCountry = document.createElement('div');
+divCountry.classList.add('country_name');
   const heading = this.createElement('h2', info.name);
   heading.classList.add('title-name');
-  this.field.appendChild(heading);
+  divCountry.appendChild(heading);
+  this.field.appendChild(divCountry);
 
-  const flag = document.createElement('img');
-  flag.src = info.flag;
-  this.field.appendChild(flag)
+const divInfo = document.createElement('div');
+divInfo.classList.add('info');
 
   const regionTitle = this.createElement('h3', 'Region:');
   regionTitle.classList.add('subtitle');
-  this.field.appendChild(regionTitle)
+  divInfo.appendChild(regionTitle);
 
   const region = this.createElement('p', info.region);
-  this.field.appendChild(region);
+  divInfo.appendChild(region);
 
   const languageTitle = this.createElement('h3', 'Languages:');
   languageTitle.classList.add('subtitle');
-  this.field.appendChild(languageTitle);
+  divInfo.appendChild(languageTitle);
 
   const language = this.createList(info.languages);// COME BACK HERE
-  this.field.appendChild(language);
+  divInfo.appendChild(language);
 
 
   const demonymTitle = this.createElement('h3', 'Fun Fact:');
   demonymTitle.classList.add('subtitle');
-  this.field.appendChild(demonymTitle);
+  divInfo.appendChild(demonymTitle);
   const demonym = this.createElementBespoke('p', info);
-  this.field.appendChild(demonym);
+  divInfo.appendChild(demonym);
+
+this.field.appendChild(divInfo);
+
+  const divFlag = document.createElement('div');
+  divFlag.classList.add('flag');
+  const flag = document.createElement('img');
+  flag.src = info.flag;
+  divFlag.appendChild(flag);
+  this.field.appendChild(divFlag);
 
 };
 
