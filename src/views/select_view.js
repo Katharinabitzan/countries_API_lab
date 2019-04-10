@@ -10,6 +10,14 @@ SelectView.prototype.bindEvents = function () {
     // console.log(data);
     this.populate(data);
   });
+
+  this.section.addEventListener('change', (event)=>{
+    // console.log(event);
+    const selectedIndex = event.target.selectedIndex;
+    PubSub.publish('Select:country-selected', selectedIndex);
+
+  })
+
 };
 
 SelectView.prototype.populate = function (data) {

@@ -5,6 +5,10 @@ const ResultView = require('./views/result_view.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
+  const resultField = document.querySelector('#country');
+  const resultView = new ResultView(resultField);
+  resultView.bindEvents();
+
   const selectElement = document.querySelector('select#countries');
   const selectView = new SelectView(selectElement);
   selectView.bindEvents();
@@ -12,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const country = new Country();
   country.getData();
-  // country.bindEvents();
+  country.bindEvents();
 
 });
