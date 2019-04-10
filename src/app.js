@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   resultView.bindEvents();
 
   const selectElement = document.querySelector('select#countries');
-  const selectView = new SelectView(selectElement);
+  const button = document.querySelector('#button')
+  const selectView = new SelectView(selectElement, button);
   selectView.bindEvents();
 
 
