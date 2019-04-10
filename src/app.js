@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectElement = document.querySelector('select#countries');
   const selectView = new SelectView(selectElement);
-  // selectView.bindEvents();
+  selectView.bindEvents();
 
 
   const country = new Country();
   country.getData();
-  country.bindEvents();
+  // country.bindEvents();
 
-// hello kat
 });
